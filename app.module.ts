@@ -1,17 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import{HttpModule} from '@angular/http';
+
+
 import { AppComponent } from './app.component';
-import { EmployeeComponent } from './employee/employee.component'
-import {EmployeeListComponent} from './Employee/employeeList.component'
-import{EmployeeTitlePipe} from './Employee/employeeTitle.pipe'
+import { EmployeeComponent } from './employee/employee.component';
+import {EmployeeListComponent} from './employee/employeeList.component';
+import{EmployeeTitlePipe} from './employee/employeeTitle.pipe';
+import{EmployeeCountComponent} from './employee/employeeCount.component';
+import{SimpleComponent} from './Others/simple.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent, EmployeeComponent, EmployeeListComponent, EmployeeTitlePipe
+    AppComponent, EmployeeComponent, EmployeeListComponent, EmployeeTitlePipe, EmployeeCountComponent, SimpleComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
